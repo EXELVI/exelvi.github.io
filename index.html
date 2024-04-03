@@ -106,35 +106,60 @@
     </div>
     <h1 id="socials" class="text-center">Ecco tutti i miei socials</h1>
 
+    <style>
+      .overflow-hidden {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    
+      @media (max-width: 576px) {
+        .overflow-hidden {
+          white-space: normal;
+          overflow: auto;
+          text-overflow: clip;
+        }
+      }
+    </style>
+    
     <div class="container text-center">
       <div class="row justify-content-center my-3">
-        <div class="col-4 col-sm-2 d-grid"><a class="btn btn-outline-light" style="background-color: #333333;"
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #333333;"
             href="https://github.com/EXELVI" role="button" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Il mio profilo Github"><i class="bi bi-github"></i> EXELVI</a></div>
-        <div class="col-4 col-sm-2 d-grid"> <a class="btn btn-outline-light" style="background-color: #010101;"
+            data-bs-title="Il mio profilo Github"><i class="bi bi-github"></i> EXELVI</a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #010101;"
             href="https://www.tiktok.com/@exelvi" role="button" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Il mio server discord"><i class="bi bi-tiktok"></i> @exelvi</a></div>
-        <div class="col-4 col-sm-2 d-grid"> <a class="btn btn-outline-light" style="background-color: #cc2bac;"
+            data-bs-title="Il mio server discord"><i class="bi bi-tiktok"></i> @exelvi</a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #cc2bac;"
             href="https://www.instagram.com/exelviofficial/" role="button" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-title="Il mio profilo Instagram"><i class="bi bi-instagram"></i>
-            @exelviofficial</a></div>
-
+            @exelviofficial</a>
+        </div>
       </div>
-
-      <div class="row justify-content-center my-3 ">
-        <div class="col-4 col-sm-2 d-grid"> <a class="btn btn-outline-light" style="background-color: #000000;"
+    
+      <div class="row justify-content-center my-3">
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #000000;"
             href="https://twitter.com/exelvi1" role="button" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Il mio profilo Twitter (X)"><i class="bi bi-twitter-x"></i>
-            @exelvi1</a></div>
-        <div class="col-4 col-sm-2 d-grid"><a class="btn btn-outline-light" style="background-color: #5865F2;"
+            data-bs-title="Il mio profilo Twitter (X)"><i class="bi bi-twitter-x"></i> @exelvi1</a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #5865F2;"
             href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593" role="button"
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Il mio server discord"><i
-              class="bi bi-discord"></i> SeverInside</a></div>
-        <div class="col-4 col-sm-2 d-grid"> <a class="btn btn-outline-light" style="background-color: #ed302f;"
+              class="bi bi-discord"></i> SeverInside</a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-light overflow-hidden" style="background-color: #ed302f;"
             href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA" role="button" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-title="Il mio canale Youtube"><i class="bi bi-youtube"></i> exelvi</a></div>
+            data-bs-placement="top" data-bs-title="Il mio canale Youtube"><i class="bi bi-youtube"></i> exelvi</a>
+        </div>
       </div>
-
     </div>
 
     <p class="text-center">Per ora questo è il mio sito...</p>

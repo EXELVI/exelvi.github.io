@@ -95,47 +95,61 @@
     </div>
 
   </div>
-
+  <!-- Jumbotron -->
   <div class="container my-5">
     <div class="p-5 text-center bg-body-tertiary rounded-3 opacity-75">
       <img class="img-fluid rounded-circle mx-auto d-block w-25 h-25 opacity-100" src="/img/exelvi_profile.png"
         alt="Foto profilo EXELVI">
-      <h1 class="text-body-emphasis opacity-100">Ciao, sono <a data-bs-toggle="tooltip" data-bs-placement="top"
-          data-bs-title="o Alessandro">EXELVI</a></h1>
+      <h1 class="text-body-emphasis opacity-100"><span id="main.jumb.hello">Ciao, sono </span><a
+          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="o Alessandro">EXELVI</a></h1>
       <p class="col-lg-8 mx-auto fs-5 text-muted opacity-100">
-        Studente in un istituto tecnico con indrizzo informatica e telecomunicazioni, appassionato di
-        informatica
+        <span id="main.jumb.description"> Studente in un istituto tecnico con indrizzo informatica e telecomunicazioni,
+          appassionato di
+          informatica</span>
       </p>
       <div class="d-inline-flex gap-2 mb-5">
         <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill opacity-100" href="#site"
           type="button">
-          Esplora il mio sito
+          <span id="main.jumb.button">Esplora il mio sito</span>
         </a>
       </div>
     </div>
   </div>
 
+
+
   <div id="site" class="container mt-5">
-    <h2 class="text-center">I miei progetti</h2>
+    <!-- Projects -->
+    <h2 class="text-center">
+      <span id="main.projects.title">Progetti</span>
+    </h2>
     <div class="row">
       <div class="col-sm-6 mb-3 mb-sm-0">
         <div class="card">
           <img src="/img/Screenshot_25-3-2024_12449_exelvi.github.io.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Generatore di Numeri</h5>
-            <p class="card-text">Un generatore di numeri casuali che consente di selezionare la quantità di numeri da
-              generare, l'intervallo desiderato e di escludere numeri specifici con dei salvataggi.</p>
-            <a href="https://exelvi.github.io/generatore/" class="btn btn-primary">Apri</a>
+            <h5 class="card-title">
+              <span id="main.projects.project1.title">Generatore di numeri casuali</span>
+            </h5>
+            <p class="card-text">
+              <span id="main.projects.project1.description">Un generatore di numeri casuali che consente di selezionare
+                la quantità di numeri da generare, l'intervallo desiderato e di escludere numeri specifici con dei
+                salvataggi.</span>
+            </p>
+            <a href="https://exelvi.github.io/generatore/" class="btn btn-primary">
+              <span id="main.projects.project1.button">Apri</span>
+            </a>
           </div>
         </div>
       </div>
 
     </div>
 
+    <!-- About -->
 
-
-
-    <h2 class="text-center mt-3">Caratteristiche</h2>
+    <h2 class="text-center mt-3">
+      <span id="main.about.title">Informazioni su di me</span>
+    </h2>
     <div class="col-md-5 mx-auto p-2">
       <table class="table table-striped">
         <thead>
@@ -148,98 +162,160 @@
         <tbody>
           <tr>
             <th scope="row"><i class="bi bi-building"></i></th>
-            <td>Indirizzo Scolastico</td>
-            <td>Informatica e Telecomunicazioni</td>
+            <td>
+              <span id="main.about.schooladrtitle">Indrizzo scolastico</span>
+            </td>
+            <td>
+              <span id="main.about.schooladr">Informatica e telecomunicazioni</span>
+            </td>
           </tr>
           <tr>
             <th scope="row"><i class="bi bi-geo-fill"></i></th>
-            <td>Posizione</td>
-            <td>Veneto, Italia</td>
+            <td><span id="main.about.location">Posizione</span></td>
+            <td><span id="main.about.locationvalue">Veneto, Italia</span></td>
+            </td>
           </tr>
           <tr>
             <th scope="row"><i class="bi bi-palette-fill"></i></th>
-            <td>Colore preferito</td>
-            <td>Blu <i class="bi bi-circle-fill text-primary"></i></td>
+            <td>
+              <span id="main.about.color">Colore preferito</span>
+            </td>
+            <td>
+              <span id="main.about.colorvalue">Blu</span>
+              <i class="bi bi-circle-fill text-primary"></i>
+            </td>
           </tr>
           <tr>
             <th scope="row"><i class="bi bi-code-slash"></i></th>
-            <td><a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="di programmazione">Linguaggio</a>
-              preferito</td>
+            <td><a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="di programmazione">
+                <span id="main.about.language">Linguaggio</span>
+              </a>
+            </td>
             <td>JavaScript <i class="bi bi-filetype-js"></i></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <h2 class="text-center">I linguaggi di programmazione che so</h2>
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-5 mx-auto p-2">
-          <canvas id="torta"></canvas>
+
+
+    <!-- Skills -->
+
+    <div class="container my-3">
+      <h1 class="text-center mt-3">
+        <span id="main.skills.title">Competenze Principali</span>
+      </h1>
+      <div class="row justify-content-center">
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://www.javascript.com/" role="button" target="_blank">
+            <i class="bi bi-filetype-js"></i> JavaScript </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://nodejs.org/en/about" role="button" target="_blank">
+            <i class="bi bi-file-earmark-code"></i> Node.js </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://developer.mozilla.org/en-US/docs/Web/HTML" role="button"
+            target="_blank">
+            <i class="bi-filetype-html"></i> HTML </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://developer.mozilla.org/en-US/docs/Web/CSS" role="button"
+            target="_blank">
+            <i class="bi bi-filetype-css"></i> CSS </a>
         </div>
       </div>
     </div>
-    <h1 id="socials" class="text-center">Ecco tutti i miei socials</h1>
 
-    <style>
+    <!-- Tools -->
+
+    <h1 class="text-center mt-3">
+      <span id="main.tools.title">Strumenti</span>
+    </h1>
+    <div class="container my-3">
+      <div class="row justify-content-center">
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://code.visualstudio.com/" role="button" target="_blank">
+            <i class="bi bi-code
+            "></i> VS Code </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://git-scm.com/" role="button" target="_blank">
+            <i class="bi bi-file-earmark-code"></i> Git </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid">
+          <a class="btn btn-outline-primary" href="https://www.mongodb.com/" role="button" target="_blank">
+            <i class="bi bi-database"></i> MongoDB </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Socials -->
+
+  <h1 id="socials" class="text-center">
+    <span id="main.socials.title">Socials</span>
+  </h1>
+
+
+  <style>
+    .overflow-hidden {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 576px) {
       .overflow-hidden {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: auto;
+        text-overflow: clip;
       }
-
-      @media (max-width: 576px) {
-        .overflow-hidden {
-          white-space: normal;
-          overflow: auto;
-          text-overflow: clip;
-        }
-      }
-    </style>
+    }
+  </style>
 
 
-    <div class="container text-center">
-      <div class="row justify-content-center my-3">
+  <div class="container text-center">
+    <div class="row justify-content-center my-3">
 
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary" href="https://github.com/EXELVI" role="button"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="EXELVI" >
-            <i class="bi bi-github"></i> GitHub </a>
-        </div>
-        </a>
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary" href="https://www.tiktok.com/@exelvi" role="button" target="_blank" 
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@exelvi">
-            <i class="bi bi-tiktok"></i> TikTok </a>
-        </div>
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary" href="https://www.instagram.com/exelviofficial/" role="button"
-            target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelviofficial">
-            <i class="bi bi-instagram"></i> Instagram </a>
-        </div>
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary" href="https://twitter.com/exelvi1" role="button" target="_blank"
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi1">
-            <i class="bi bi-twitter"></i> Twitter </a>
-        </div>
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary"
-            href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593" role="button" target="_blank" 
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Inside Community">
-            <i class="bi bi-discord"></i> Discord </a>
-        </div>
-        <div class="col-4 col-sm-2 d-grid overflow-hidden">
-          <a class="btn btn-outline-primary" href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA"
-            role="button" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi">
-            <i class="bi bi-youtube"></i> YouTube </a>
-        </div>
-
-
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://github.com/EXELVI" role="button" target="_blank"
+          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="EXELVI">
+          <i class="bi bi-github"></i> GitHub </a>
       </div>
-    </div>
+      </a>
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://www.tiktok.com/@exelvi" role="button" target="_blank"
+          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@exelvi">
+          <i class="bi bi-tiktok"></i> TikTok </a>
+      </div>
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://www.instagram.com/exelviofficial/" role="button"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelviofficial">
+          <i class="bi bi-instagram"></i> Instagram </a>
+      </div>
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://twitter.com/exelvi1" role="button" target="_blank"
+          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi1">
+          <i class="bi bi-twitter"></i> Twitter </a>
+      </div>
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593"
+          role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-title="Inside Community">
+          <i class="bi bi-discord"></i> Discord </a>
+      </div>
+      <div class="col-4 col-sm-2 d-grid overflow-hidden">
+        <a class="btn btn-outline-primary" href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA" role="button"
+          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi">
+          <i class="bi bi-youtube"></i> YouTube </a>
+      </div>
 
-    <p class="text-center">Per ora questo è il mio sito...</p>
+
+    </div>
+  </div>
+
+
   </div>
 
 
@@ -247,33 +323,142 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
+
+      //traduzioni
+
+      const en = {
+        "main": {
+          "jumb": {
+            "hello": "Hello, I'm ",
+            "button": "Explore my site",
+            "description": "Student in a technical institute with an address in computer science and telecommunications, passionate about computer science"
+          },
+          "projects": {
+            "title": "Projects",
+            "project1": {
+              "title": "Random number generator",
+              "description": "A random number generator that allows you to select the quantity of numbers to generate, the desired range and to exclude specific numbers with saves.",
+              "button": "Open"
+            }
+          },
+          "about": {
+            "title": "About me",
+            "schooladrtitle": "School address",
+            "schooladr": "Computer science and telecommunications",
+            "location": "Location",
+            "locationvalue": "Veneto, Italy",
+            "color": "Favorite color",
+            "colorvalue": "Blue",
+            "language": "Programming language"
+          },
+          "skills": {
+            "title": "Main skills"
+          },
+          "tools": {
+            "title": "Tools"
+          },
+          "socials": {
+            "title": "Socials"
+          }
+        }
+      }
+
+      const es = {
+        "main": {
+          "jumb": {
+            "hello": "Hola, soy ",
+            "button": "Explora mi sitio",
+            "description": "Estudiante en un instituto técnico con una dirección en informática y telecomunicaciones, apasionado por la informática"
+          },
+          "projects": {
+            "title": "Proyectos",
+            "project1": {
+              "title": "Generador de números aleatorios",
+              "description": "Un generador de números aleatorios que le permite seleccionar la cantidad de números a generar, el rango deseado y excluir números específicos con guardados.",
+              "button": "Abrir"
+            }
+          },
+          "about": {
+            "title": "Sobre mí",
+            "schooladrtitle": "Dirección de la escuela",
+            "schooladr": "Informática y telecomunicaciones",
+            "location": "Ubicación",
+            "locationvalue": "Veneto, Italia",
+            "color": "Color favorito",
+            "colorvalue": "Azul",
+            "language": "Lenguaje de programación"
+          },
+          "skills": {
+            "title": "Habilidades principales"
+          },
+          "tools": {
+            "title": "Herramientas"
+          },
+          "socials": {
+            "title": "Redes sociales"
+          }
+        }
+      }
+
+      let userLang = navigator.language || navigator.userLanguage;
+      console.log(userLang);
+
+      if (userLang === "en-US") {
+        translate(en);
+      } else if (userLang === "es-ES") {
+        translate(es);
+      } else if (userLang === "it-IT") { }
+      else {
+        translate(en);
+      }
+
+      function translate(lang) {
+        for (const key in lang) {
+          if (lang.hasOwnProperty(key)) {
+            const element = lang[key];
+            for (const key2 in element) {
+              if (element.hasOwnProperty(key2)) {
+                const element2 = element[key2];
+                for (const key3 in element2) {
+                  if (element2.hasOwnProperty(key3)) {
+                    const element3 = element2[key3];
+                    // in case of nested objects
+                    if (typeof element3 === 'object') {
+                      for (const key4 in element3) {
+                        if (element3.hasOwnProperty(key4)) {
+                          const element4 = element3[key4];
+                          try {
+                            document.getElementById(key + "." + key2 + "." + key3 + "." + key4).innerText = element4;
+                          } catch (error) {
+                            console.error("Element not found: " + key + "." + key2 + "." + key3 + "." + key4);
+                          }
+                        }
+                      }
+                    } else {
+                      try {
+                        document.getElementById(key + "." + key2 + "." + key3).innerText = element3;
+                      } catch (error) {
+                        console.error("Element not found: " + key + "." + key2 + "." + key3);
+                      }
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
       var scene = document.getElementById('scene');
       var parallaxInstance = new Parallax(scene);
 
-      var ctx = document.getElementById('torta').getContext('2d');
-      var myPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: ['JavaScript', 'HTML', 'CSS', 'Python', 'Lua'],
-          datasets: [{
-            label: 'Linguaggi di programmazione',
-            data: [79, 59, 33, 36, 12],
-            backgroundColor: [
-              'rgb(240,219,79)',
-              'rgb(241,101,41)',
-              'rgb(21,114,182)',
-              'rgb(255,216,74)',
-              'rgb(0, 0, 128)'
-            ],
-            hoverOffset: 4
-          }]
-        },
-        options: {
-          responsive: true
-        }
-      });
+
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+
 
     });
 
@@ -387,6 +572,7 @@
 
     window.onresize = debounce(resize, 200);
     //window.onscroll = debounce(resize, 200);
+
 
   </script>
 

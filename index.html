@@ -477,14 +477,11 @@
         }
       }
 
-  
+
 
 
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-
-
 
     });
 
@@ -501,15 +498,16 @@
 
 
     var scene = document.getElementById('scene');
+    try {
       DeviceOrientationEvent
         .requestPermission()
         .then(() => {
           new Parallax(scene)
         })
-
-
-
-
+    } catch (error) {
+      console.error("DeviceOrientationEvent not supported")
+      new Parallax(scene)
+    }
 
     // Resize handler.
     (resize = function () {

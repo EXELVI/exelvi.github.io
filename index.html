@@ -477,12 +477,7 @@
         }
       }
 
-      var scene = document.getElementById('scene');
-      DeviceOrientationEvent
-        .requestPermission()
-        .then(() => {
-          new Parallax(scene)
-        })
+  
 
 
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -505,8 +500,12 @@
     }
 
 
-    var scene = document.getElementById("scene");
-    new Parallax(scene);
+    var scene = document.getElementById('scene');
+      DeviceOrientationEvent
+        .requestPermission()
+        .then(() => {
+          new Parallax(scene)
+        })
 
 
 

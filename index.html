@@ -70,6 +70,10 @@
       }
     }
 
+    #site {
+      z-index: 100;
+    }
+
 
     ::-webkit-scrollbar {
       height: 1rem;
@@ -114,13 +118,6 @@
     </div>
 
   </div>
-  <!-- terminal (https://exelvi.github.io/terminal) button -->
-  <div class="container text-end position-fixed bottom-0 end-0 my-1">
-    <a class="btn btn-secondary btn-lg mt-3" href="https://exelvi.github.io/terminal" role="button">
-      <i class="bi bi-terminal"></i>
-
-    </a>
-  </div>
 
   <!-- Jumbotron -->
   <div class="container my-5">
@@ -160,7 +157,8 @@
                 <span id="main.projects.project1.title">Generatore di numeri casuali</span>
               </h5>
               <p class="card-text">
-                <span id="main.projects.project1.description">Un generatore di numeri casuali che consente di selezionare
+                <span id="main.projects.project1.description">Un generatore di numeri casuali che consente di
+                  selezionare
                   la quantità di numeri da generare, l'intervallo desiderato e di escludere numeri specifici con dei
                   salvataggi.</span>
               </p>
@@ -170,7 +168,7 @@
             </a>
           </div>
         </div>
-        
+
       </div>
       <div class="col-sm-6">
         <div class="card h-100 d-flex flex-column">
@@ -296,75 +294,54 @@
         </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- Socials -->
-
-  <h1 id="socials" class="text-center">
-    <span id="main.socials.title">Socials</span>
-  </h1>
-
-
-  <style>
-    .overflow-hidden {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    @media (max-width: 576px) {
-      .overflow-hidden {
-        white-space: normal;
-        overflow: auto;
-        text-overflow: clip;
-      }
-    }
-  </style>
-
-
-  <div class="container text-center">
-    <div class="row justify-content-center my-3">
-
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://github.com/EXELVI" role="button" target="_blank"
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="EXELVI">
-          <i class="bi bi-github"></i> GitHub </a>
+    <h1 id="socials" class="text-center">
+      <span id="main.socials.title">Socials</span>
+    </h1>
+    <div class="container my-3">
+      <div class="row justify-content-center">
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA"
+            role="button" target="_blank">
+            <i class="bi bi-youtube"></i> YouTube </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://www.instagram.com/exelviofficial/" role="button"
+            target="_blank">
+            <i class="bi bi-instagram"></i> Instagram </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://twitter.com/exelvi1" role="button" target="_blank">
+            <i class="bi bi-twitter"></i> Twitter </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary"
+            href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593" role="button" target="_blank">
+            <i class="bi bi-discord"></i> Discord </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://www.tiktok.com/@exelvi" role="button" target="_blank">
+            <i class="bi bi-tiktok"></i> TikTok </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://www.twitch.tv/exelvii" role="button" target="_blank">
+            <i class="bi bi-twitch"></i> Twitch </a>
+        </div>
+        <div class="col-4 col-sm-2 d-grid mb-1">
+          <a class="btn btn-outline-primary" href="https://www.youtube.com/@exelvi" role="button" target="_blank">
+            <i class="bi bi-youtube"></i> YouTube </a>
+        </div>
       </div>
-      </a>
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://www.tiktok.com/@exelvi" role="button" target="_blank"
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@exelvi">
-          <i class="bi bi-tiktok"></i> TikTok </a>
-      </div>
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://www.instagram.com/exelviofficial/" role="button"
-          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelviofficial">
-          <i class="bi bi-instagram"></i> Instagram </a>
-      </div>
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://twitter.com/exelvi1" role="button" target="_blank"
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi1">
-          <i class="bi bi-twitter"></i> Twitter </a>
-      </div>
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593"
-          role="button" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-          data-bs-title="Inside Community">
-          <i class="bi bi-discord"></i> Discord </a>
-      </div>
-      <div class="col-4 col-sm-2 d-grid overflow-hidden">
-        <a class="btn btn-outline-primary" href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA" role="button"
-          target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="exelvi">
-          <i class="bi bi-youtube"></i> YouTube </a>
-      </div>
-
-
     </div>
   </div>
 
-
-  </div>
+    <!-- terminal (https://exelvi.github.io/terminal) button -->
+    <div class="container text-end position-fixed bottom-0 end-0 my-1" style="z-index: 0;">
+      <a class="btn btn-secondary btn-lg mt-3" href="https://exelvi.github.io/terminal" role="button">
+        <i class="bi bi-terminal"></i>
+      </a>
+    </div>
+  
 
 
   <script>
@@ -465,10 +442,14 @@
         translate(en);
       } else if (userLang === "es-ES") {
         translate(es);
-      } else if (userLang === "it-IT") { }
+      } else if (userLang === "it-IT") {
+        translate(en);
+       }
       else {
         translate(en);
       }
+
+      
 
       function translate(lang) {
         for (const key in lang) {

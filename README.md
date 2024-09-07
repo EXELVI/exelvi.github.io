@@ -5,7 +5,6 @@
 [![Website](https://img.shields.io/website-up-down-green-red/https/exelvi.github.io.svg)](https://exelvi.github.io)
 [![GitHub last commit](https://img.shields.io/github/last-commit/EXELVI/exelvi.github.io)](https://github.com/EXELVI/exelvi.github.io/commits/main)
 [![GitHub stars](https://img.shields.io/github/stars/EXELVI/exelvi.github.io?style=social)](https://github.com/EXELVI/exelvi.github.io/stargazers)
-[![GitHub license](https://img.shields.io/github/license/EXELVI/exelvi.github.io)](https://github.com/EXELVI/exelvi.github.io/blob/main/LICENSE)
 
 ## Overview
 

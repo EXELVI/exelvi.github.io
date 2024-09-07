@@ -351,11 +351,12 @@
 
   <script>
 
+    /*
+    EN: Hey there! If you are reading this, you are probably looking at the source code of my website. If you want to use some parts of the code I gently ask you to give me credit by writing my github profile (https://github.com/EXELVI) in the code or the readme of your project. I'm just a student and I would be very happy if I find out that my code is useful to someone. Thanks for understanding!
+    IT: Ciao! Se stai leggendo questo, probabilmente stai guardando il codice sorgente del mio sito web. Se vuoi utilizzare alcune parti del codice ti chiedo gentilmente di darmi i crediti scrivendo il mio profilo github (https://github.com/EXELVI) nel codice o nel readme del tuo progetto. Sono solo uno studente e sarei molto felice se scroprissi che il mio codice è utile a qualcuno. Grazie per la comprensione!
+    */
 
     document.addEventListener("DOMContentLoaded", function () {
-
-      //traduzioni
-
       const en = {
         "main": {
           "jumb": {
@@ -452,7 +453,7 @@
         translate(en);
       }
 
-      
+    
 
       function translate(lang) {
         for (const key in lang) {
@@ -492,9 +493,6 @@
         }
       }
 
-
-
-
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
@@ -511,7 +509,6 @@
       };
     }
 
-
     var scene = document.getElementById('scene');
     try {
       DeviceOrientationEvent
@@ -524,7 +521,6 @@
       new Parallax(scene)
     }
 
-    // Resize handler.
     (resize = function () {
       maxStarsPosition = window.innerWidth / 10
 

@@ -100,6 +100,7 @@
     ::-webkit-scrollbar-thumb:hover {
       background-color: hsla(0, 0%, 100%, .3)
     }
+
   </style>
 
 </head>
@@ -118,6 +119,11 @@
     </div>
 
   </div>
+
+  <a href="https://exelvi.github.io/terminal" class="btn btn-secondary position-fixed text-end bottom-0 end-0 my-1 btn-lg me-1">
+    <i class="bi bi-terminal"></i>
+  </a>
+  
 
   <!-- Jumbotron -->
   <div class="container my-5">
@@ -306,8 +312,7 @@
     <div class="container my-3">
       <div class="row justify-content-center">
         <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.youtube.com/channel/UCsHJDts_im9NaU2z3rUp8VA"
-            role="button" target="_blank">
+          <a class="btn btn-outline-primary" href="https://www.youtube.com/@exelvi" role="button" target="_blank">
             <i class="bi bi-youtube"></i> YouTube </a>
         </div>
         <div class="col-4 col-sm-2 d-grid mb-1">
@@ -332,21 +337,10 @@
           <a class="btn btn-outline-primary" href="https://www.twitch.tv/exelvii" role="button" target="_blank">
             <i class="bi bi-twitch"></i> Twitch </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.youtube.com/@exelvi" role="button" target="_blank">
-            <i class="bi bi-youtube"></i> YouTube </a>
-        </div>
       </div>
     </div>
   </div>
 
-    <!-- terminal (https://exelvi.github.io/terminal) button -->
-    <div class="container text-end position-fixed bottom-0 end-0 my-1" style="z-index: 0;">
-      <a class="btn btn-secondary btn-lg mt-3" href="https://exelvi.github.io/terminal" role="button">
-        <i class="bi bi-terminal"></i>
-      </a>
-    </div>
-  
 
 
   <script>
@@ -448,12 +442,12 @@
         translate(en);
       } else if (userLang === "es-ES") {
         translate(es);
-      } else if (userLang === "it-IT") {}
+      } else if (userLang === "it-IT") { }
       else {
         translate(en);
       }
 
-    
+
 
       function translate(lang) {
         for (const key in lang) {

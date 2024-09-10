@@ -100,7 +100,6 @@
     ::-webkit-scrollbar-thumb:hover {
       background-color: hsla(0, 0%, 100%, .3)
     }
-
   </style>
 
 </head>
@@ -120,10 +119,11 @@
 
   </div>
 
-  <a href="https://exelvi.github.io/terminal" class="btn btn-secondary position-fixed text-end bottom-0 end-0 my-1 btn-lg me-1">
+  <a href="https://exelvi.github.io/terminal"
+    class="btn btn-secondary position-fixed text-end bottom-0 end-0 my-1 btn-lg me-1">
     <i class="bi bi-terminal"></i>
   </a>
-  
+
 
   <!-- Jumbotron -->
   <div class="container my-5">
@@ -174,7 +174,6 @@
             </a>
           </div>
         </div>
-
       </div>
       <div class="col-sm-6">
         <div class="card h-100 d-flex flex-column">
@@ -192,6 +191,40 @@
             <a href="https://exelvi.github.io/terminal" class="btn btn-primary">
               <span id="main.projects.project2.button">Apri</span>
             </a>
+          </div>
+        </div>
+      </div>
+      <a id="moreProjects" class="text-center text-primary mt-3" style="cursor: pointer;"><i
+          class="bi bi-arrow-down"></i>
+        <span id="main.projects.more">Altri progetti</span></a>
+    </div>
+    <div id="moreProjectsContainer" class="row d-none mt-3">
+      <div class="col-12 col-sm-6 mb-3">
+        <div class="card h-100 d-flex flex-column">
+          <img src="https://raw.githubusercontent.com/EXELVI/password_generator/main/screen.png" class="card-img-top"
+            alt="Schermata Password Generator">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title">Password Generator</h5>
+              <p class="card-text"><span id="main.projects.project3.description">Un generatore di password che consente
+                  di selezionare la lunghezza della password e di includere caratteri speciali, numeri, lettere
+                  maiuscole e molto altro.</span></p>
+            </div>
+            <a href="https://exelvi.github.io/password_generator" class="btn btn-primary"><span
+                id="main.projects.open">Apri</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 mb-3">
+        <div class="card h-100 d-flex flex-column">
+          <img src="https://raw.githubusercontent.com/EXELVI/ssh-terminal/main/assets/screen.png" class="card-img-top"
+            alt="Schermata SSH Terminal">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h5 class="card-title">SSH Terminal</h5>
+            <p class="card-text"><span id="main.projects.project4.description">Un terminale SSH realizzato in Node.js
+                utilizzando ssh2, con un'ampia gamma di comandi, gestione degli utenti e persino giochi integrati per
+                un'esperienza divertente. </span></p>
+            <a href="https://github.com/EXELVI/ssh-terminal" class="btn btn-primary">Repository</a>
           </div>
         </div>
       </div>
@@ -360,6 +393,8 @@
           },
           "projects": {
             "title": "Projects",
+            "more": "More projects",
+            "open": "Open",
             "project1": {
               "title": "Random number generator",
               "description": "A random number generator that allows you to select the quantity of numbers to generate, the desired range and to exclude specific numbers with saves.",
@@ -369,6 +404,12 @@
               "title": "terminal",
               "description": "It is a web-based terminal application made with HTML, CSS and JavaScript. Originally created for portfolio purposes, it is a simple implementation of a terminal interface that allows users to run commands, navigate the file system, etc...",
               "button": "Open"
+            },
+            "project3": {
+              "description": "A password generator that allows you to select the length of the password and include special characters, numbers, uppercase letters and much more.",
+            },
+            "project4": {
+              "description": "An SSH terminal made in Node.js using ssh2, with a wide range of commands, user management and even integrated games for a fun experience."
             }
           },
           "about": {
@@ -402,6 +443,7 @@
           },
           "projects": {
             "title": "Proyectos",
+            "more": "Más proyectos",
             "project1": {
               "title": "Generador de números aleatorios",
               "description": "Un generador de números aleatorios que le permite seleccionar la cantidad de números a generar, el rango deseado y excluir números específicos con guardados.",
@@ -411,6 +453,12 @@
               "title": "terminal",
               "description": "Es una aplicación de terminal basada en la web hecha con HTML, CSS y JavaScript. Creada originalmente con fines de portafolio, es una implementación simple de una interfaz de terminal que permite a los usuarios ejecutar comandos, navegar por el sistema de archivos, etc...",
               "button": "Abrir"
+            },
+            "project3": {
+              "description": "Un generador de contraseñas que le permite seleccionar la longitud de la contraseña e incluir caracteres especiales, números, letras mayúsculas y mucho más."
+            },
+            "project4": {
+              "description": "Un terminal SSH hecho en Node.js usando ssh2, con una amplia gama de comandos, gestión de usuarios e incluso juegos integrados para una experiencia divertida."
             }
           },
           "about": {
@@ -606,6 +654,23 @@
     window.onresize = debounce(resize, 200);
     //window.onscroll = debounce(resize, 200);
 
+
+    $(document).ready(function () {
+      let defaultHtml = ""
+      $('#moreProjects').click(function () {
+        const container = $('#moreProjectsContainer');
+        if (container.hasClass('d-none')) {
+          container.hide().removeClass('d-none').slideDown();
+          defaultHtml = $('#moreProjects').html();
+          $('#moreProjects').html('<i class="bi bi-arrow-up"></i>')
+        } else {
+          container.slideUp(function () {
+            $(this).addClass('d-none');
+          });
+          $('#moreProjects').html(defaultHtml);
+        }
+      });
+    });
 
   </script>
 

@@ -5,11 +5,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EXELVI - Home</title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#1d3a4d">
   <!-- OG-->
   <meta property="og:title" content="EXELVI - Home">
   <meta property="og:description"
     content="Studente in un istituto tecnico con indrizzo informatica e telecomunicazioni, appassionato di informatica">
-  <meta property="og:image" content="/img/exelvi_profile.png">
+  <meta property="og:image"
+    content="https://exelvi.xyz/og/EXELVI.png?theme=dark&fontSize=210px&caption=Home&images=https://exelvi.xyz/img/exelvi_profile.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="EXELVI - Home">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://exelvi.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EXELVI">
@@ -17,13 +30,15 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
   <!--Twitter-->
-  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@exelvi1">
   <meta name="twitter:creator" content="@exelvi1">
   <meta name="twitter:title" content="EXELVI - Home">
   <meta name="twitter:description"
     content="Studente in un istituto tecnico con indrizzo informatica e telecomunicazioni, appassionato di informatica">
-  <meta name="twitter:image" content="/img/exelvi_profile.png">
+  <meta name="twitter:image"
+    content="https://exelvi.xyz/og/EXELVI.png?theme=dark&fontSize=210px&caption=Home&images=https://exelvi.xyz/img/exelvi_profile.png">
+  <meta name="twitter:image:alt" content="EXELVI - Home">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://exelvi.github.io/">
   <meta name="twitter:domain" content="exelvi.github.io">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -69,6 +84,43 @@
         box-shadow: 0 0 0.5px 0.5px rgba(255, 255, 255, 0.5);
       }
     }
+    .star-type2,
+    .star-type3 .animated {
+      -webkit-animation: twinkle 1s infinite;
+      animation: twinkle 1s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .animated .star-type1 {
+        background: white;
+        border-radius: 50%;
+        width: 3px;
+        height: 3px;
+        box-shadow: 0 0 10px white;
+        -webkit-animation: comet 5s linear infinite;
+        animation: comet 5s linear infinite;
+    }
+    
+    @keyframes comet {
+      0% {
+        -webkit-transform: translateX(-100vw) translateY(-100vw);
+        transform: translateX(-100vw) translateY(-100vw);
+      }
+      100% {
+        -webkit-transform: translateX(100vw) translateY(100vh);
+        transform: translateX(100vw) translateY(100vh);
+      }
+    }
+
+
 
     #site {
       z-index: 100;
@@ -100,6 +152,12 @@
     ::-webkit-scrollbar-thumb:hover {
       background-color: hsla(0, 0%, 100%, .3)
     }
+
+    @media (max-width: 768px) {
+      .socialText {
+        display: none;
+      }
+    }
   </style>
 
 </head>
@@ -116,14 +174,7 @@
     <div data-depth="1.5">
       <div id="third-layer-stars" class="layer-stars"></div>
     </div>
-
   </div>
-
-  <a href="https://exelvi.github.io/terminal"
-    class="btn btn-secondary position-fixed text-end bottom-0 end-0 my-1 btn-lg me-1">
-    <i class="bi bi-terminal"></i>
-  </a>
-
 
   <!-- Jumbotron -->
   <div class="container my-5">
@@ -134,19 +185,20 @@
           data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="o Alessandro">EXELVI</a></h1>
       <p class="col-lg-8 mx-auto fs-5 text-muted opacity-100">
         <span id="main.jumb.description"> Studente in un istituto tecnico con indrizzo informatica e telecomunicazioni,
-          appassionato di
-          informatica</span>
+          appassionato di informatica</span>
       </p>
-      <div class="d-inline-flex gap-2 mb-5">
-        <a class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill opacity-100" href="#site"
-          type="button">
+      <div class="btn-group" role="group">
+        <a class="btn btn-primary btn-lg rounded-start-pill" href="#site" type="button">
           <span id="main.jumb.button">Esplora il mio sito</span>
+        </a>
+        <a href="https://exelvi.github.io/terminal" class="btn btn-secondary btn-lg rounded-end-pill">
+          <i class="bi bi-terminal"></i>
         </a>
       </div>
     </div>
   </div>
 
-
+  
 
   <div id="site" class="container mt-5">
     <!-- Projects -->
@@ -230,152 +282,166 @@
       </div>
     </div>
 
+
     <!-- About -->
 
     <h2 class="text-center mt-3">
       <span id="main.about.title">Informazioni su di me</span>
     </h2>
-    <div class="col-md-5 mx-auto p-2">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row"><i class="bi bi-building"></i></th>
-            <td>
-              <span id="main.about.schooladrtitle">Indrizzo scolastico</span>
-            </td>
-            <td>
-              <span id="main.about.schooladr">Informatica e telecomunicazioni</span>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row"><i class="bi bi-geo-fill"></i></th>
-            <td><span id="main.about.location">Posizione</span></td>
-            <td><span id="main.about.locationvalue">Veneto, Italia</span></td>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row"><i class="bi bi-palette-fill"></i></th>
-            <td>
-              <span id="main.about.color">Colore preferito</span>
-            </td>
-            <td>
-              <span id="main.about.colorvalue">Blu</span>
-              <i class="bi bi-circle-fill text-primary"></i>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row"><i class="bi bi-code-slash"></i></th>
-            <td><a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="di programmazione">
-                <span id="main.about.language">Linguaggio</span>
-              </a>
-            </td>
-            <td>JavaScript <i class="bi bi-filetype-js"></i></td>
-          </tr>
-        </tbody>
-      </table>
+
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-12 col-md-8">
+          <div class="card h-100">
+            <div class="card-body d-flex align-items-center">
+              <i class="bi bi-building me-2"></i>
+              <div>
+                <div id="main.about.schooladrtitle" class="fw-bold">Indirizzo scolastico</div>
+                <div id="main.about.schooladr">Informatica e telecomunicazioni</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <div class="card-body d-flex align-items-center">
+              <i class="bi bi-geo-fill me-2"></i>
+              <div>
+                <div id="main.about.location" class="fw-bold">Posizione</div>
+                <div id="main.about.locationvalue">Veneto, Italia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <div class="card-body d-flex align-items-center">
+              <i class="bi bi-palette-fill me-2"></i>
+              <div>
+                <div id="main.about.color" class="fw-bold">Colore preferito</div>
+                <div id="main.about.colorvalue">Blu <i class="bi bi-circle-fill text-primary"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="card h-100">
+            <div class="card-body d-flex align-items-center">
+              <i class="bi bi-code-slash me-2"></i>
+              <div>
+                <div id="main.about.language" class="fw-bold">Linguaggio</div>
+                <div>JavaScript <i class="bi bi-filetype-js"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
     <!-- Skills -->
-
     <div class="container my-3">
       <h1 class="text-center mt-3">
         <span id="main.skills.title">Competenze Principali</span>
       </h1>
-      <div class="row justify-content-center">
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://www.javascript.com/" role="button" target="_blank">
-            <i class="bi bi-filetype-js"></i> JavaScript </a>
+      <div class="row justify-content-center g-3">
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.javascript.com/" role="button" target="_blank">
+            <i class="bi bi-filetype-js me-2"></i> JavaScript
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://nodejs.org/en/about" role="button" target="_blank">
-            <i class="bi bi-file-earmark-code"></i> Node.js </a>
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://nodejs.org/en/about" role="button" target="_blank">
+            <i class="bi bi-file-earmark-code me-2"></i> Node.js
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://developer.mozilla.org/en-US/docs/Web/HTML" role="button"
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            role="button" target="_blank">
+            <i class="bi-filetype-html me-2"></i> HTML
+          </a>
+        </div>
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://developer.mozilla.org/en-US/docs/Web/CSS" role="button"
             target="_blank">
-            <i class="bi-filetype-html"></i> HTML </a>
+            <i class="bi bi-filetype-css me-2"></i> CSS
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://developer.mozilla.org/en-US/docs/Web/CSS" role="button"
-            target="_blank">
-            <i class="bi bi-filetype-css"></i> CSS </a>
-        </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://learn.microsoft.com/it-it/dotnet/visual-basic/" role="button"
-            target="_blank">
-            <i class="bi bi-file-earmark-code"></i> Visual Basic </a>
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://learn.microsoft.com/it-it/dotnet/visual-basic/"
+            role="button" target="_blank">
+            <i class="bi bi-file-earmark-code me-2"></i> Visual Basic
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Tools -->
 
-    <h1 class="text-center mt-3">
-      <span id="main.tools.title">Strumenti</span>
-    </h1>
     <div class="container my-3">
-      <div class="row justify-content-center">
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://code.visualstudio.com/" role="button" target="_blank">
-            <i class="bi bi-code
-            "></i> VS Code </a>
+      <h1 class="text-center mt-3">
+        <span id="main.tools.title">Strumenti</span>
+      </h1>
+      <div class="row justify-content-center g-3">
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://code.visualstudio.com/" role="button" target="_blank">
+            <i class="bi bi-code me-2"></i> VS Code
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://git-scm.com/" role="button" target="_blank">
-            <i class="bi bi-file-earmark-code"></i> Git </a>
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://git-scm.com/" role="button" target="_blank">
+            <i class="bi bi-git me-2"></i> Git
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid">
-          <a class="btn btn-outline-primary" href="https://www.mongodb.com/" role="button" target="_blank">
-            <i class="bi bi-database"></i> MongoDB </a>
+        <div class="col-6 col-sm-3 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.mongodb.com/" role="button" target="_blank">
+            <i class="bi bi-database me-2"></i> MongoDB
+          </a>
         </div>
       </div>
     </div>
 
-    <h1 id="socials" class="text-center">
-      <span id="main.socials.title">Socials</span>
-    </h1>
+    <!-- Socials -->
+
     <div class="container my-3">
-      <div class="row justify-content-center">
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.youtube.com/@exelvi" role="button" target="_blank">
-            <i class="bi bi-youtube"></i> YouTube </a>
+      <h1 id="socials" class="text-center">
+        <span id="main.socials.title">Socials</span>
+      </h1>
+      <div class="row justify-content-center g-3">
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.youtube.com/@exelvi" role="button" target="_blank">
+            <i class="bi bi-youtube me-2"></i> <span class="socialText d-none d-sm-inline">YouTube</span>
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.instagram.com/exelviofficial/" role="button"
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.instagram.com/exelviofficial/" role="button"
             target="_blank">
-            <i class="bi bi-instagram"></i> Instagram </a>
+            <i class="bi bi-instagram me-2"></i> <span class="socialText d-none d-sm-inline">Instagram</span>
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://twitter.com/exelvi1" role="button" target="_blank">
-            <i class="bi bi-twitter"></i> Twitter </a>
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://twitter.com/exelvi1" role="button" target="_blank">
+            <i class="bi bi-twitter me-2"></i> <span class="socialText d-none d-sm-inline">Twitter</span>
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary"
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100"
             href="https://discord.gg/inside-community-cerchiamo-staff-759013736509079593" role="button" target="_blank">
-            <i class="bi bi-discord"></i> Discord </a>
+            <i class="bi bi-discord me-2"></i> <span class="socialText d-none d-sm-inline">Discord</span>
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.tiktok.com/@exelvi" role="button" target="_blank">
-            <i class="bi bi-tiktok"></i> TikTok </a>
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.tiktok.com/@exelvi" role="button" target="_blank">
+            <i class="bi bi-tiktok me-2"></i> <span class="socialText d-none d-sm-inline">TikTok</span>
+          </a>
         </div>
-        <div class="col-4 col-sm-2 d-grid mb-1">
-          <a class="btn btn-outline-primary" href="https://www.twitch.tv/exelvii" role="button" target="_blank">
-            <i class="bi bi-twitch"></i> Twitch </a>
+        <div class="col-6 col-sm-2 d-flex justify-content-center">
+          <a class="btn btn-outline-primary w-100" href="https://www.twitch.tv/exelvii" role="button" target="_blank">
+            <i class="bi bi-twitch me-2"></i> <span class="socialText d-none d-sm-inline">Twitch</span></a>
         </div>
       </div>
     </div>
   </div>
-
-
-
   <script>
 
     /*
@@ -537,7 +603,6 @@
 
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
     });
 
     var maxStarsPosition = 100;
@@ -551,6 +616,7 @@
       };
     }
 
+
     var scene = document.getElementById('scene');
     try {
       DeviceOrientationEvent
@@ -563,97 +629,53 @@
       new Parallax(scene)
     }
 
+    // Resize handler.
     (resize = function () {
-      maxStarsPosition = window.innerWidth / 10
+      const maxStarsPosition = window.innerWidth / 10;
 
-      scene.style.width = window.innerWidth + 'px';
-      scene.style.height = window.innerHeight + 'px';
+      scene.style.width = `${window.innerWidth}px`;
+      scene.style.height = `${window.innerHeight}px`;
 
-      let firstLayer = document.getElementById("first-layer-stars");
-      let secondLayer = document.getElementById("second-layer-stars");
-      let thirdLayer = document.getElementById("third-layer-stars");
+      const layers = {
+      first: document.getElementById("first-layer-stars"),
+      second: document.getElementById("second-layer-stars"),
+      third: document.getElementById("third-layer-stars")
+      };
 
-      firstLayer.innerHTML = ""
-      secondLayer.innerHTML = ""
-      thirdLayer.innerHTML = ""
-      let iterator = 0;
-      let starsPosition = [];
-      while (iterator <= maxStarsPosition) {
-        let xpositionStar1 = Math.random();
-        let ypositionStar1 = Math.random();
-        let xpositionStar2 = Math.random();
-        let ypositionStar2 = Math.random();
-        let xpositionStar3 = Math.random();
-        let ypositionStar3 = Math.random();
-
-        var positionForStar1 = {
-          x: Math.floor(window.innerWidth * xpositionStar1),
-          y: Math.floor(window.innerHeight * ypositionStar1)
-        };
-        var positionForStar2 = {
-          x: Math.floor(window.innerWidth * xpositionStar2),
-          y: Math.floor(window.innerHeight * ypositionStar2)
-        };
-        var positionForStar3 = {
-          x: Math.floor(window.innerWidth * xpositionStar3),
-          y: Math.floor(window.innerHeight * ypositionStar3)
-        };
-
-        let starType1 = document.createElement("div");
-        starType1.classList.add("star-type1");
-        if (iterator % 3 === 0) {
-          starType1.classList.add("animated");
-        }
-        starType1.classList.add(iterator);
-        starType1.style.cssText =
-          "top:" +
-          positionForStar1.y +
-          "px;left:" +
-          positionForStar1.x +
-          "px;background: white;";
-        firstLayer.appendChild(starType1);
-
-        let starType2 = document.createElement("div");
-        starType2.classList.add("star-type2");
-        starType2.classList.add(iterator);
-        starType2.style.cssText =
-          "top:" +
-          positionForStar2.y +
-          "px;left:" +
-          positionForStar2.x +
-          "px;background: pink;";
-        secondLayer.appendChild(starType2);
-
-        let starType3 = document.createElement("div");
-        starType3.classList.add("star-type3");
-        starType3.classList.add(iterator);
-        starType3.style.cssText =
-          "top:" +
-          positionForStar3.y +
-          "px;left:" +
-          positionForStar3.x +
-          "px;background: white;";
-        thirdLayer.appendChild(starType3);
-
-        iterator++;
-        starsPosition.push(positionForStar1);
+      Object.values(layers).forEach(layer => {
+      while (layer.firstChild) {
+        layer.removeChild(layer.firstChild);
       }
+      });
 
+      const starsPosition = [];
+      for (let i = 0; i <= maxStarsPosition; i++) {
+      const starData = [
+        { layer: layers.first, type: "star-type1", color: "white", animated: i % 3 === 0 },
+        { layer: layers.second, type: "star-type2", color: "pink", animated: false },
+        { layer: layers.third, type: "star-type3", color: "white", animated: false }
+      ];
 
-      for (let count = 0; count < 4; count++) {
-        let position = Math.floor(
-          Math.random() * (maxStarsPosition - minStarsPosition) + minStarsPosition
-        );
-        let coord = starsPosition[position];
-        let element = document.getElementsByClassName("star-type1 " + position)[0];
+      starData.forEach(({ layer, type, color, animated }) => {
+        const x = Math.floor(window.innerWidth * Math.random());
+        const y = Math.floor(window.innerHeight * Math.random());
+
+        const star = document.createElement("div");
+        star.classList.add(type);
+        if (animated) star.classList.add("animated");
+        star.style.top = `${y}px`;
+        star.style.left = `${x}px`;
+        star.style.background = color;
+        layer.appendChild(star);
+      });
+
+      starsPosition.push({ x: 0, y: 0 }); 
       }
-
 
     })();
 
     window.onresize = debounce(resize, 200);
     //window.onscroll = debounce(resize, 200);
-
 
     $(document).ready(function () {
       let defaultHtml = ""

@@ -68,57 +68,52 @@
       z-index: -1;
     }
 
-    .layer-stars {
+    .layer-stars .star-type1,
+    .layer-stars .star-type2,
+    .layer-stars .star-type3 {
+      width: 1px;
+      height: 1px;
       position: absolute;
-      width: 100%;
-      height: 100%;
-
-      .star-type1,
-      .star-type2,
-      .star-type3 {
-        width: 1px;
-        height: 1px;
-        position: absolute;
-        border-radius: 1px;
-        -webkit-box-shadow: 0 0 0.5px 0.5px rgba(255, 255, 255, 0.5);
-        box-shadow: 0 0 0.5px 0.5px rgba(255, 255, 255, 0.5);
-      }
+      border-radius: 1px;
+      box-shadow: 0 0 0.5px 0.5px rgba(255, 255, 255, 0.5);
     }
-    .star-type2,
-    .star-type3 .animated {
-      -webkit-animation: twinkle 1s infinite;
+
+    .layer-stars .star-type2.animated,
+    .layer-stars .star-type3.animated {
       animation: twinkle 1s infinite;
     }
 
+    .layer-stars .star-type1.animated {
+      background: white;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      box-shadow: 0 0 10px white;
+      animation: comet 5s linear infinite;
+    }
+
+    @keyframes comet {
+      0% {
+        transform: translateX(-100vw) translateY(-100vw);
+      }
+
+      100% {
+        transform: translateX(100vw) translateY(100vh);
+      }
+    }
+
     @keyframes twinkle {
-      0%, 100% {
+
+      0%,
+      100% {
         opacity: 0.5;
       }
+
       50% {
         opacity: 1;
       }
     }
 
-    .animated .star-type1 {
-        background: white;
-        border-radius: 50%;
-        width: 3px;
-        height: 3px;
-        box-shadow: 0 0 10px white;
-        -webkit-animation: comet 5s linear infinite;
-        animation: comet 5s linear infinite;
-    }
-    
-    @keyframes comet {
-      0% {
-        -webkit-transform: translateX(-100vw) translateY(-100vw);
-        transform: translateX(-100vw) translateY(-100vw);
-      }
-      100% {
-        -webkit-transform: translateX(100vw) translateY(100vh);
-        transform: translateX(100vw) translateY(100vh);
-      }
-    }
 
 
 
@@ -198,7 +193,7 @@
     </div>
   </div>
 
-  
+
 
   <div id="site" class="container mt-5">
     <!-- Projects -->
@@ -637,39 +632,45 @@
       scene.style.height = `${window.innerHeight}px`;
 
       const layers = {
-      first: document.getElementById("first-layer-stars"),
-      second: document.getElementById("second-layer-stars"),
-      third: document.getElementById("third-layer-stars")
+        first: document.getElementById("first-layer-stars"),
+        second: document.getElementById("second-layer-stars"),
+        third: document.getElementById("third-layer-stars")
       };
 
       Object.values(layers).forEach(layer => {
-      while (layer.firstChild) {
-        layer.removeChild(layer.firstChild);
-      }
+        while (layer.firstChild) {
+          layer.removeChild(layer.firstChild);
+        }
       });
 
       const starsPosition = [];
       for (let i = 0; i <= maxStarsPosition; i++) {
-      const starData = [
-        { layer: layers.first, type: "star-type1", color: "white", animated: i % 3 === 0 },
-        { layer: layers.second, type: "star-type2", color: "pink", animated: false },
-        { layer: layers.third, type: "star-type3", color: "white", animated: false }
-      ];
+        const starData = [
+          { layer: layers.first, type: "star-type1", color: "white", animated: i % 15 === 0 },
+          { layer: layers.second, type: "star-type2", color: "pink", animated: false },
+          { layer: layers.third, type: "star-type3", color: "white", animated: false }
+        ];
 
-      starData.forEach(({ layer, type, color, animated }) => {
-        const x = Math.floor(window.innerWidth * Math.random());
-        const y = Math.floor(window.innerHeight * Math.random());
+        starData.forEach(({ layer, type, color, animated }) => {
+          const x = Math.floor(window.innerWidth * Math.random());
+          const y = Math.floor(window.innerHeight * Math.random());
 
-        const star = document.createElement("div");
-        star.classList.add(type);
-        if (animated) star.classList.add("animated");
-        star.style.top = `${y}px`;
-        star.style.left = `${x}px`;
-        star.style.background = color;
-        layer.appendChild(star);
-      });
+          const star = document.createElement("div")
+          star.classList.add(type);
+          if (animated) star.classList.add("animated");
+          if (type === "star-type1" && animated) {
+            const randomDelay = Math.random() * 10;
+            star.style.animationDelay = `${randomDelay}s`;
+          }
 
-      starsPosition.push({ x: 0, y: 0 }); 
+          star.style.top = `${y}px`;
+          star.style.left = `${x}px`;
+          star.style.background = color;
+
+          layer.appendChild(star);
+        });
+
+        starsPosition.push({ x: 0, y: 0 });
       }
 
     })();
